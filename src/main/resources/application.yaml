@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: simplified
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+    hiraki:
+      initialization-fail-timeout: 0
+    url: jdbc:h2:mem:simplified
+    username:
+    password:
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVER:localhost}:${KAFKA_PORT:29092}
+    producer:
+      bootstrap: ${KAFKA_SERVER:localhost}:${KAFKA_PORT:29092}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      bootstrap: ${KAFKA_SERVER:localhost}:${KAFKA_PORT:29092}
+      group-id: example-one-group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
