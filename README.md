@@ -1,9 +1,11 @@
 # A simplified hexagonal architecture proposal
 
+<p align="center">
+  <img style="width: 50%" src="https://github.com/netodeolino/netodeolino.github.io/blob/main/img/posts/simplified-hexagonal/simplified-hexagonal.png" alt="Simplified Hexagonal">
+</p>
+
 ### Post about the project
 - [Simplified Hexagonal](https://netodeolino.github.io/posts/simplified-hexagonal.html)
-
-<img style="width: 100%" src="[deolino.png](https://raw.githubusercontent.com/netodeolino/netodeolino.github.io/main/img/posts/simplified-hexagonal/simplified-hexagonal.png?raw=true)" alt="Simplified Hexagonal">
 
 ### Run project
 
